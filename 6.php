@@ -602,7 +602,6 @@ $data = [
         "Favorites" => "cereals, stews"
     ]
 ];
-$contador=count($data);
 foreach ($data as $elemento){
     echo $elemento["User"] . " is " . $elemento["Age"] . " years old <br>";
 }   

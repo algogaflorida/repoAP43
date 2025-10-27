@@ -601,12 +601,10 @@ $data = [
         "Age" => "39",
         "Favorites" => "cereals, stews"
     ]
-    ];
-echo "People from Spain <br> --------------------------------<br>";
-foreach ($data as $elemento) {
-    if ($elemento["Country"] == "Spain" && $elemento["Favorites"] == "") {
-        echo $elemento["User"] . " likes all kinds of food <br>";
-    } elseif ($elemento["Country"] == "Spain") {
-        echo $elemento["User"] . " likes " . $elemento["Favorites"] . "<br>";
-    }
+];
+$contador=count($data);
+$plato=$_GET['plato'];
+$gente=0;
+foreach ($data){
+
 }

@@ -602,6 +602,13 @@ $data = [
         "Favorites" => "cereals, stews"
     ]
 ];
-$contador=count($data);
-$plato=$_GET['plato'];
-$gente=0;
+$nogustos=0;
+$edad=0;
+foreach ($data as $elemento){
+    if ($elemento["Favorites"]==""){
+        $nogustos++;
+        $edad+=$elemento["Age"];
+    }
+}
+$mediaedad=$edad/$nogustos;
+echo "Total people with no preferences: $nogustos <br> Average Age for people with no preferences: $mediaedad";
