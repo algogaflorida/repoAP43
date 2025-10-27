@@ -605,11 +605,10 @@ $data = [
 $contador=count($data);
 $nogustos=0;
 $edad=0;
-for ($i=0;$i<$contador;$i++){
-    $perfiles=$data[$i];
-    if ($perfiles["Favorites"]==""){
+foreach ($data as $elemento){
+    if ($elemento["Favorites"]==""){
         $nogustos++;
-        $edad+=$perfiles["Age"];
+        $edad+=$elemento["Age"];
     }
 }
 $mediaedad=$edad/$nogustos;

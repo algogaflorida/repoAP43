@@ -604,9 +604,10 @@ $data = [
     ];
 $contador=count($data);
 echo "People from Spain <br> --------------------------------<br>";
-for ($i=0;$i<$contador;$i++){
-    $perfiles=$data[$i];
-    if ($perfiles["Country"]=="Spain"){
-        echo $perfiles["User"] . " likes " . $perfiles["Favorites"] . "<br>";
-    } 
+foreach ($data as $elemento) {
+    if ($elemento["Country"] == "Spain" && $elemento["Favorites"] == "") {
+        echo $elemento["User"] . " likes all kinds of food <br>";
+    } elseif ($elemento["Country"] == "Spain") {
+        echo $elemento["User"] . " likes " . $elemento["Favorites"] . "<br>";
+    }
 }
