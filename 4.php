@@ -6,6 +6,7 @@ $pais=explode(",", $country);
 $cuenta=count($ciudad);
 $arr=[];
 for ($i=0;$i<$cuenta;$i++){
-        $arr[$i]=['country' => $pais[$i], 'city' => $ciudad[$i]];
+        $arr[$i]['country']=$pais[$i];
+        $arr[$i]['city']=$ciudad[$i];
 }
 var_dump($arr);

@@ -1,42 +1,11 @@
 <?php
-$capitales=[
-    [   'country' => 'Japan',
-        'capital'=> 'Tokyo'
-    ],
-    [   'country'=> 'Mexico',
-        'capital'=> 'Mexico City'  
-    ],
-    [
-        'country'=> 'USA',
-        'capital'=> 'New York City'
-    ],
-    [
-        'country'=> 'India',
-        'capital'=> 'Mumbai'
-    ],
-    [
-        'country'=>'Korea',
-        'capital'=>'Seoul'
-    ],
-    [
-        'country'=>'China',
-        'capital'=>'Shanghai'
-    ],
-    [
-        'country'=>'Nigeria',
-        'capital'=>'Lagos'
-    ],
-    [
-        'country'=>'Argentina',
-        'capital'=>'Buenos Aires'
-    ],
-    [
-        'country'=>'Egypt',
-        'capital'=>'Cairo'
-    ],
-    [
-        'country'=>'England',
-        'capital'=>'London'
-    ]
-    ];
-var_dump($capitales);
+$city = ["Tokyo", "Mexico City", "New York City", "Mumbai", "Seoul", "Shanghai", "Lagos", "Buenos Aires", " Cairo", "London"];
+$country = ["Japan", "Mexico", "USA", "India", "Korea", "China", "Nigeria", "Argentina", "Egypt", "England"];
+
+$capitals=[];
+
+for ($i=0; $i<count($city); $i++){
+    $capitals[$i]["country"]=$country[$i];
+    $capitals[$i]["city"]=$city[$i];
+}
+var_dump($capitals);

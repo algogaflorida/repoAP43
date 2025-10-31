@@ -6,4 +6,4 @@ $array=[];
 for ($i=0;$i<$contador;$i++){
     $array[$i]=explode(",", $paiscapital[$i]);
 }
-var_dump($array);    
+var_dump($array);

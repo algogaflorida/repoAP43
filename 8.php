@@ -601,12 +601,15 @@ $data = [
         "Age" => "39",
         "Favorites" => "cereals, stews"
     ]
-    ];
-echo "People from Spain <br> --------------------------------<br>";
+];
+
+$pais=$_GET['pais'];
+echo "People from $pais <br> --------------------------------<br>";
+
 foreach ($data as $elemento) {
-    if ($elemento["Country"] == "Spain" && $elemento["Favorites"] == "") {
+    if ($elemento["Country"] == $pais && $elemento["Favorites"] == "") {
         echo $elemento["User"] . " likes all kinds of food <br>";
-    } elseif ($elemento["Country"] == "Spain") {
+    } elseif ($elemento["Country"] == $pais) {
         echo $elemento["User"] . " likes " . $elemento["Favorites"] . "<br>";
     }
 }

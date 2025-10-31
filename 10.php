@@ -602,9 +602,23 @@ $data = [
         "Favorites" => "cereals, stews"
     ]
 ];
-$contador=count($data);
-$plato=$_GET['plato'];
-$gente=0;
-foreach ($data){
 
+$favorito=$_GET['plato'];
+$gente=0;
+$count=count($data);
+$count2=count($data[0]);
+
+$arr=[];
+
+foreach ($data as $dato){
+        foreach ($dato as $plato => $resultado){
+        $platos=explode(",", $resultado);
+        $arr[]=$platos;
+    }
+    for ($i=0;$i<$count;$i++){
+        if ($arr[$i] == $favorito){
+        $gente++;
+    }
+    }
 }
+var_dump($arr);
