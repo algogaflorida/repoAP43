@@ -623,19 +623,18 @@ $vistos = [];
 $primero = true;
 
 foreach ($nacion as $pais) {
-    $ya = false;
+    $vistos = false;
     foreach ($vistos as $v) {
         if ($v == $pais) {
-            $ya = true;
+            $vistos = true;
         }
     }
-    
-    if ($ya == false) { 
+    if ($vistos == false) { 
         if ($primero == false) {
             echo ", ";
         }
         echo $pais;
         $primero = false;
-        $vistos[] = $pais; 
+        $visto[] = $pais; 
     }
 }
