@@ -1,5 +1,4 @@
 <?php
-
 $data = [
     [
         "User" => "Ishmael Porter",
@@ -602,40 +601,20 @@ $data = [
         "Favorites" => "cereals, stews"
     ]
 ];
-
-$favorito=$_GET['plato'];
-$gente=0;
-$nacion=[];
-$arr = [];
-foreach ($data as $dato) {
-    $platos = explode(", ", $dato["Favorites"]);
-    foreach ($platos as $plato) {
-        $arr[] = $plato;
-        if ($plato==$favorito){
-        $gente++;
-        $nacion[]=$dato["Country"];
-    }
-    }
+$array = [];
+foreach($data as $dato){
+    $array[]=$dato["Age"];
 }
-echo "Total people who likes $favorito: $gente <br>";
-echo "People's countries who like $favorito: ";
-$vistos = [];
-$primero = true;
-
-foreach ($nacion as $pais) {
-    $ya = false;
-    foreach ($vistos as $v) {
-        if ($v == $pais) {
-            $ya = true;
+    for ($i = 1; $i < count($array); $i++) {
+        for ($j = 0; $j < count($array) - $i; $j++) {
+            if ($array[$j] > $array[$j + 1]) {
+                $k = $array[$j + 1];
+                $array[$j + 1] = $array[$j];
+                $array[$j] = $k;
+                
+            }
         }
     }
-    
-    if ($ya == false) { 
-        if ($primero == false) {
-            echo ", ";
-        }
-        echo $pais;
-        $primero = false;
-        $vistos[] = $pais; 
-    }
+foreach ($array as $edad) {
+    echo $edad . "<br>";
 }
