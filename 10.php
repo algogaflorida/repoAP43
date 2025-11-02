@@ -619,12 +619,12 @@ foreach ($data as $dato) {
 }
 echo "Total people who likes $favorito: $gente <br>";
 echo "People's countries who like $favorito: ";
-$vistos = [];
+$visto = [];
 $primero = true;
 
 foreach ($nacion as $pais) {
     $vistos = false;
-    foreach ($vistos as $v) {
+    foreach ($visto as $v) {
         if ($v == $pais) {
             $vistos = true;
         }
